@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8"/> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>login</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
       rel="stylesheet"
@@ -24,7 +24,7 @@
         </nav>
       </header>
       <!-- login section -->
-      <div class="hero bg-base-200">
+      <div class="">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
             <form class="card-body">
@@ -33,8 +33,8 @@
                   <span class="label-text">Account Number</span>
                 </label>
                 <input
-                  type="number"
-                  placeholder="Enter your number"
+                  value="01301301302" type="number"
+                  id="account-number" placeholder="Enter your number"
                   class="input input-bordered"
                   required
                 />
@@ -45,7 +45,7 @@
                 </label>
                 <input
                   type="text"
-                  placeholder="Type your PIN"
+                  id="pin" placeholder="Type your PIN"
                   class="input input-bordered"
                   required
                 />
@@ -56,12 +56,14 @@
                 </label>
               </div>
               <div class="form-control mt-6">
-                <button class="btn btn-primary">Login</button>
+                <button id="login-btn" class="btn btn-primary">Login</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </section>
+
+    <script src="./script/login.js"></script>
   </body>
 </html>
