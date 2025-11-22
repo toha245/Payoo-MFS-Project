@@ -17,7 +17,9 @@
         <nav class="flex justify-around items-center">
           <img class="w-16" src="./assets/Group.png" alt="" />
           <div>
-            <h1 class="text-3xl font-bold">$ <span id="main-balance">4500</span></h1>
+            <h1 class="text-3xl font-bold">
+              $ <span id="main-balance">4500</span>
+            </h1>
             <p class="border border-rose-600 rounded p-1">Available Balance</p>
           </div>
           <button class="btn">Logout</button>
@@ -31,13 +33,13 @@
 
           <div class="cards grid grid-cols-3 mt-14 gap-2 p-2">
             <div
-              class="box cursor-pointer border border-solid border-red-600 p-4 text-center rounded-lg"
+              id="add-money-box" class="box cursor-pointer border border-solid border-red-600 p-4 text-center rounded-lg"
             >
               <img class="w-8 mx-auto" src="./assets/wallet1.png" alt="" />
               <h3>Add Money</h3>
             </div>
             <div
-              class="box cursor-pointer border border-solid border-red-600 p-4 text-center rounded-lg"
+              id="cashout-box" class="box cursor-pointer border border-solid border-red-600 p-4 text-center rounded-lg"
             >
               <img class="w-8 mx-auto" src="./assets/send1.png" alt="" />
               <h3>Cash out</h3>
@@ -68,7 +70,7 @@
             </div>
           </div>
 
-          <section>
+          <section id="add-money" class="">
             <h2>Add Money</h2>
             <div class="">
               <div class="hero-content flex-col lg:flex-row-reverse">
@@ -126,7 +128,11 @@
                       </label>
                     </div>
                     <div class="form-control mt-6">
-                      <button id="add-money" id="login-btn" class="btn btn-primary">
+                      <button
+                        id="add-money"
+                        id="login-btn"
+                        class="btn btn-primary"
+                      >
                         Add Money
                       </button>
                     </div>
@@ -135,9 +141,71 @@
               </div>
             </div>
           </section>
+
+          <section id="cashout">
+            <h2>Cashout</h2>
+            <select class="select w-full max-w-xs">
+              <option disabled selected>Select Bank</option>
+              <option value="Bkash">Bkash</option>
+              <option value="Nagad">Nagad</option>
+              <option value="Rocket">Rocket</option>
+              <option value="DBBL">DBBL</option>
+              <option value="Upay">Upay</option>
+            </select>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Account Number</span>
+              </label>
+              <input
+                value="01301301302"
+                type="number"
+                id="account-number"
+                placeholder="Enter your number"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Amount</span>
+              </label>
+              <input
+                type="number"
+                id="cashout-amount"
+                placeholder="Type Your Amount"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">PIN</span>
+              </label>
+              <input
+                value="1234"
+                type="text"
+                id="cashout-pin"
+                placeholder="Type your PIN"
+                class="input input-bordered"
+                required
+              />
+              <label class="label">
+                <a href="#" class="label-text-alt link link-hover"
+                  >Forgot password?</a
+                >
+              </label>
+            </div>
+            <div class="form-control mt-6">
+              <button id="cashout-btn" id="login-btn" class="btn btn-primary">
+                Cashout
+              </button>
+            </div>
+          </section>
         </section>
       </header>
     </section>
     <script src="./script/addMoney.js"></script>
+    <script src="./script/toggle.js"></script>
+    <script src="./script/cashout.js"></script>
   </body>
 </html>
