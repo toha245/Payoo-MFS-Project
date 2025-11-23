@@ -63,7 +63,7 @@
               <h3>Get Bonus</h3>
             </div>
             <div
-              class="box cursor-pointer border border-solid border-red-600 p-4 text-center rounded-lg"
+              id="transaction-box" class="box cursor-pointer border border-solid border-red-600 p-4 text-center rounded-lg"
             >
               <img class="w-8 mx-auto" src="./assets/transaction1.png" alt="" />
               <h3>Transaction history</h3>
@@ -77,7 +77,7 @@
                 <div class="card w-full max-w-sm shrink-0 shadow-2xl">
                   <form class="card-body">
                     <legend>Select Bank</legend>
-                    <select class="select w-full max-w-xs">
+                    <select id="all-bank" class="select w-full max-w-xs">
                       <option disabled selected>Select Bank</option>
                       <option value="Bkash">Bkash</option>
                       <option value="Nagad">Nagad</option>
@@ -201,6 +201,14 @@
               </button>
             </div>
           </section>
+
+          <section id="transaction-history">
+            <h1 class="text-3xl font-bold text-red text-center p-3">Transaction-history </h1>
+
+            <div id="transaction-container">
+
+            </div>
+          </section>
         </section>
       </header>
     </section>
@@ -208,5 +216,6 @@
     <script src="./script/addMoney.js"></script>
     <script src="./script/toggle.js"></script>
     <script src="./script/cashout.js"></script>
+    <script src="./script/transaction-history.js"></script>
   </body>
 </html>
